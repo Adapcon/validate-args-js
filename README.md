@@ -20,7 +20,7 @@ npm install --save validate-args-js
 const check = require('validate-args-js')
 ```
 
-#### Simple mode
+#### Simple
 ``` js
 check({ 
     arg: undefined, 
@@ -38,7 +38,7 @@ check({
 //Return -> throw new Error('one argument has not been defined!')
 ```
 
-#### Accept mode
+#### Accept
 ``` js
 check({ 
     arg: undefined, 
