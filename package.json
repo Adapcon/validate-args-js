@@ -4,9 +4,7 @@
   "description": "Validate arguments to Javascript.",
   "main": "index.js",
   "scripts": {
-    "test": "_mocha tests/**/*.spec.js",
-    "tdd": "npm run test",
-    "coverage": "nyc npm run test"
+    "test": "./node_modules/istanbul/lib/cli.js cover ./node_modules/mocha/bin/_mocha -- -R spec ./tests/**/*.spec.js"
   },
   "author": "Kelvin Oenning <kelvin@adapcon.com.br> (https://adapcon.com.br/)",
   "homepage": "https://adapcon.com.br/",
