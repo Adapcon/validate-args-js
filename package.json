@@ -11,6 +11,10 @@
   "author": "Kelvin Oenning <kelvin@adapcon.com.br> (https://adapcon.com.br/)",
   "homepage": "https://adapcon.com.br/",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adapcon/validate-args-js"
+  },
   "nyc": {
     "reporter": [
       "text",
@@ -20,10 +24,6 @@
     "exclude": [
       "tests/**"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Adapcon/validate-args-js"
   },
   "devDependencies": {
     "chai": "^4.1.2",
