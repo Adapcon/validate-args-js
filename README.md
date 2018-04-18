@@ -22,7 +22,7 @@ const check = require('validate-args-js')
 
 #### Simple
 ``` js
-check({ 
+check.arg({ 
     arg: undefined, 
     err: 'err name' 
 })
@@ -30,7 +30,7 @@ check({
 //Return -> throw new Error('err name')
 ```
 ``` js
-check({ 
+check.arg({ 
     arg: undefined, 
     err: undefined 
 })
@@ -40,7 +40,7 @@ check({
 
 #### Accept
 ``` js
-check({ 
+check.arg({ 
     arg: undefined, 
     err: 'err name',
     accept: {
@@ -52,7 +52,7 @@ check({
 //Return -> throw new Error('err name')
 ```
 ``` js
-check({ 
+check.arg({ 
     arg: 4, 
     err: 'err name',
     accept: {
@@ -64,7 +64,7 @@ check({
 //Return -> throw new Error('err accept name')
 ```
 ``` js
-check({ 
+check.arg({ 
     arg: 4, 
     err: 'err name',
     accept: {
@@ -74,4 +74,41 @@ check({
 })
 
 //Return -> throw new Error('one argument has not been accepted!')
+```
+
+#### List
+``` js
+check.args([
+    { 
+        arg: 1, 
+        err: 'err value',
+        accept: {
+            options: [1,2,3],
+            err: 'err accept value'
+        }
+    },
+    { 
+        arg: 4, 
+        err: 'err value 2',
+        accept: {
+            options: [1,2,3],
+            err: 'err accept value 2'
+        }
+    }
+])
+
+//Return -> throw new Error('err accept value 2')
+```
+
+``` js
+check.args([{ 
+    arg: undefined, 
+    err: 'err name',
+    accept: {
+        options: [1,2,3],
+        err: 'err accept name'
+    }
+}])
+
+//Return -> throw new Error('err name')
 ```

@@ -2,7 +2,7 @@ const throwIfMissing = arg => {
   throw new Error(`${arg} is not defined!`)
 }
 
-module.exports.one = function ({ arg, err, accept } = throwIfMissing`object`) {
+module.exports.arg = function ({ arg, err, accept } = throwIfMissing`object`) {
   if (accept && !accept.options) throwIfMissing`accept.options`;
   else if (accept && !Array.isArray(accept.options)) throw new Error('accept.options is not Array!')
 
@@ -22,6 +22,6 @@ module.exports.one = function ({ arg, err, accept } = throwIfMissing`object`) {
   }
 }
 
-module.exports.list = function (array = throwIfMissing`array`) {
-  array.map(i => this.one(i))
+module.exports.args = function (array = throwIfMissing`array`) {
+  array.map(i => this.arg(i))
 }
