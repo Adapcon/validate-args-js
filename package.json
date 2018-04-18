@@ -1,0 +1,34 @@
+{
+  "name": "validate-args-js",
+  "version": "1.0.0",
+  "description": "Validate arguments to Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests/**/*.spec.js",
+    "tdd": "npm run test",
+    "coverage": "nyc npm run test"
+  },
+  "author": "Kelvin Oenning <kelvin@adapcon.com.br> (https://adapcon.com.br/)",
+  "homepage": "https://adapcon.com.br/",
+  "license": "MIT",
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/willianjusten/btc-converter.git"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.1.0",
+    "nyc": "^11.6.0",
+    "sinon": "^4.5.0"
+  },
+  "dependencies": {}
+}
