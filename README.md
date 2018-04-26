@@ -1,6 +1,6 @@
 # Validate-args-js
 
-Validate arguments to Javascript.
+Validate arguments for a Javascript.
 
 [![Build Status](https://travis-ci.org/Adapcon/validate-args-js.svg?branch=master)](https://travis-ci.org/Adapcon/validate-args-js)
 
